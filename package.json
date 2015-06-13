@@ -1,0 +1,28 @@
+{
+  "name": "ryankershdotcom",
+  "version": "0.1.1",
+  "description": "Ryan Kersh",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:js": "browserify scripts/index.js -o scripts/ryan.js",
+    "build": "gulp build",
+    "lint": "eslint assets/scripts/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "..."
+  },
+  "author": "Ryan Kersh",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^10.2.4",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-sass": "^2.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "node-bourbon": "^4.2.3"
+  }
+}
