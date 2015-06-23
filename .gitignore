@@ -1,5 +1,6 @@
 _site
 .sass-cache
+.DS_Store
 
 ### Node template
 # Logs
@@ -31,4 +32,5 @@ build/Release
 node_modules
 
 .idea
+
 

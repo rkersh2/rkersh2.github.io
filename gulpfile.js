@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
+    minifycss = require('gulp-minify-css'),
     uglify = require('gulp-uglify'),
     del = require('del');
 
@@ -30,6 +31,7 @@ gulp.task('styles', function() {
             includePaths: require('node-bourbon').includePaths
         }))
         .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
+        .pipe(minifycss())
         .pipe(gulp.dest('./assets/styles'));
 });
 

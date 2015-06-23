@@ -1,5 +1,5 @@
 "use strict";
 
-var calc = require("./lib/calc");
+var init = require('./lib/init');
 
-calc.calctest(3, 4);
+init.init();
