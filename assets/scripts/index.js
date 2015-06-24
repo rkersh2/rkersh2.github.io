@@ -1,5 +1,4 @@
 "use strict";
 
-var init = require('./lib/init');
-
-init.init();
+var animate = require('./lib/init');
+animate.init();

@@ -1,9 +1,9 @@
 'use strict';
 
 var canvas = require('./canvas');
-var particle = require('./particle');
+var Particle = require('./particle');
 var logo = require('./logo');
-var animate = require('./animate');
+var utility = require('./utils');
 
 
 exports.init = function() {
@@ -15,10 +15,18 @@ exports.init = function() {
             for (var x = 0; x < canvas.width; x += 3) {
                 index = (y * canvas.width + x) * 4;
                 if(pixels[++index] > 0) {
-                    canvas.particleArr.push(particle.particle.createPar(x, y, 0, 0));
+                    canvas.particleArr.push(new Particle(x, y, 0, 0));
                 }
             }
         }
-        animate.make();
+        function make() {
+            canvas.context.clearRect(0, 0, canvas.width, canvas.width);
+            for(var i = 0; i < canvas.particleArr.length; i++) {
+                var p = canvas.particleArr[i];
+                canvas.context.fillRect(p.x, p.y, 2, 2);
+            }
+            requestAnimationFrame(make);
+        }
+        make();
     };
 };
