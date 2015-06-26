@@ -7,6 +7,7 @@ body {
   height: 100vh;
   overflow: hidden;
   position: relative;
+  background-color: #191919;
 }
 
 canvas {
@@ -20,5 +21,7 @@ canvas {
   &#canvas {
     z-index: 2;
   }
+  &#orbit {
+    z-index: 1;
+  }
 }
-

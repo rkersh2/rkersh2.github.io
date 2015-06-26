@@ -14,8 +14,8 @@ exports.initLogo = function(ctx) {
     ctx.translate(0,0);
     ctx.scale(1,1);
     ctx.translate(0,0);
-    ctx.fillStyle = '#fff';
-    ctx.strokeStyle = '#fff';
+    ctx.fillStyle = '#191919';
+    ctx.strokeStyle = '#191919';
     ctx.lineCap = 'butt';
     ctx.lineJoin = 'miter';
     ctx.miterLimit = 4;

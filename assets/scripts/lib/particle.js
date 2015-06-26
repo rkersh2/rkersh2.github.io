@@ -6,15 +6,8 @@ function Particle (x, y, speed, direction) {
     this.vx = Math.cos(direction) * speed;
     this.vy = Math.sin(direction) * speed;
 }
-var particle = {
-    x: 0,
-    y: 0,
-    vx: 0,
-    vy: 0,
-    update: function() {
+Particle.prototype.update = function() {
         this.x += this.vx;
         this.y += this.vy;
-    }
 };
-Particle.prototype = particle;
 module.exports = Particle;

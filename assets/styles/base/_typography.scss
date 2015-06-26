@@ -8,7 +8,7 @@ body {
 }
 
 h1,
-h2,
+//h2,
 h3,
 h4,
 h5,
@@ -17,6 +17,17 @@ h6 {
   font-size: $base-font-size;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
+}
+
+h2 {
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+  color: #101010;
+  position: absolute;
+  top: 47%;
+  left: 59%;
+  margin: 0;
+  font-size: 5em;
 }
 
 p {
