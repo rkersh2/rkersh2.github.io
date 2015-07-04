@@ -1,16 +1,14 @@
 'use strict';
 
+exports.image = document.getElementById('source');
 exports.canvas = document.getElementById('canvas');
 exports.targetCanvas = document.getElementById('target');
-exports.orbit = document.getElementById('orbit');
 exports.context = exports.canvas.getContext('2d');
 exports.targetContext = exports.targetCanvas.getContext('2d');
-exports.orbitContext = exports.orbit.getContext('2d');
-exports.width = exports.targetCanvas.width = exports.canvas.width = 300;
-exports.height = exports.targetCanvas.height = exports.canvas.height = 300;
-exports.orbitWidth = exports.orbit.width = window.innerWidth;
-exports.orbitHeight = exports.orbit.height = window.innerHeight;
-exports.center = exports.width / 2;
-exports.orbitCenterX = exports.orbitWidth / 2;
-exports.orbitCenterY = exports.orbitHeight / 2;
+exports.width = exports.canvas.width = exports.targetCanvas.width = window.innerWidth;
+exports.height = exports.canvas.height = exports.targetCanvas.height = window.innerHeight;
+exports.centerX = exports.width / 2;
+exports.centerY = exports.height / 2;
+exports.centerXAdjusted = exports.centerX - 150; // this is half the targets width
+exports.centerYAdjusted = exports.centerY - 150; // same for height
 exports.particleArr = [];
