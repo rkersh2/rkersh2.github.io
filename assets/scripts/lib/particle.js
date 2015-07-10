@@ -1,10 +1,12 @@
 'use strict';
 
-function Particle (x, y) {
+function Particle (x, y, mx, my) {
     this.originX = x;
     this.originY = y;
     this.x = x;
     this.y = y;
+    this.rx = x - mx;
+    this.ry = y - my;
 }
 Particle.prototype.move = function() {
     this.vx = this.x - this.originX;
