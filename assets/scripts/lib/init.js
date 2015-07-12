@@ -16,7 +16,7 @@ exports.init = function() {
         for (var x = 0, w = canvas.width; x < w; x += 3) {
             index = (y * w + x) * 4;
             if(pixels[++index] > 0) {
-                canvas.particleArr.push(new Particle(x, y, canvas.mouse.x, canvas.mouse.y));
+                canvas.particleArr.push(new Particle(x, y));
             }
         }
     }

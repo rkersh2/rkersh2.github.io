@@ -20,3 +20,6 @@ document.body.addEventListener("mousemove", function(event) {
     exports.mouse.x = event.clientX;
     exports.mouse.y = event.clientY;
 });
+exports.mouseRadius = Math.pow(100, 2);
+exports.friction = 0.95;
+exports.ease = 0.25;

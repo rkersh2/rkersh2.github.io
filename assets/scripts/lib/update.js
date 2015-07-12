@@ -7,17 +7,17 @@ var init = require('./init');
 exports.update = function () {
     for(var i = 0, j = canvas.particleArr.length; i < j; i++) {
         var p = canvas.particleArr[i];
-        if(utility.utils.randomInt(1, 100) < 10) {
-            p.x = utility.utils.randomInt(p.x - 5, p.x + 5);
-            p.y = utility.utils.randomInt(p.y - 5, p.y + 5);
-            p.move();
-        }
+        //if(utility.utils.randomInt(1, 100) < 20) {
+        //    p.x = utility.utils.randomInt(p.originX - 5, p.originX + 5);
+        //    p.y = utility.utils.randomInt(p.originY - 5, p.originY + 5);
+        //}
+        p.update(canvas.mouse.x, canvas.mouse.y, canvas.mouseRadius, canvas.friction, canvas.ease);
     }
     init.ball.update(canvas.centerX, canvas.centerY);
 };
 
 exports.render = function() {
-    canvas.context.clearRect(0, 0, canvas.width, canvas.width);
+    canvas.context.clearRect(0, 0, canvas.width, canvas.height);
     for(var i = 0, j = canvas.particleArr.length; i < j; i++) {
         var p = canvas.particleArr[i];
         canvas.context.fillStyle = "#505050";
