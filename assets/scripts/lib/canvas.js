@@ -35,6 +35,9 @@ document.body.addEventListener("touchend", function(event) {
     exports.mouse.x = 1;
     exports.mouse.y = 1;
 }, false);
+window.onresize = function(event) {
+    document.location.reload(true);
+};
 exports.mouseRadius = Math.pow(100, 2);
 exports.friction = 0.95;
 exports.ease = 0.25;
