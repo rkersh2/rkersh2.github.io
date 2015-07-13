@@ -30,9 +30,9 @@ document.body.addEventListener("touchmove", function(event) {
     exports.mouse.x = event.targetTouches[0].clientX;
     exports.mouse.y = event.targetTouches[0].clientY;
 }, false);
-document.body.addEventListener("touchend", function() {
-    exports.mouse.x = 0;
-    exports.mouse.y = 0;
+document.body.addEventListener("touchend", function(event) {
+    exports.mouse.x = event.changedTouches[0].clientX;
+    exports.mouse.y = event.changedTouches[0].clientY;
 }, false);
 exports.mouseRadius = Math.pow(100, 2);
 exports.friction = 0.95;
