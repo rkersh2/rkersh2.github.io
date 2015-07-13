@@ -15,7 +15,6 @@ exports.update = function () {
     }
     init.ball.update(canvas.centerX, canvas.centerY);
 };
-
 exports.render = function() {
     canvas.context.clearRect(0, 0, canvas.width, canvas.height);
     for(var i = 0, j = canvas.particleArr.length; i < j; i++) {
